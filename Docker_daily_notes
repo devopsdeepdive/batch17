@@ -9,3 +9,39 @@ https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 
 free: communit edition
 premium: enterprise-edition
+
+docker commands:
+docker hub: search for the images
+y(DockerHub:https://hub.docker.com/)
+How to use docker images?
+How to create docker container?
+
+Common Commands:
+docker --help
+docker --version
+docker info
+images      List images
+ pull        Download an image from a registry(DockerHub:https://hub.docker.com/)
+docker pull tomcat(latest version of tomcat)
+docker pull tomcat:jdk17
+  history     Show the history of an image
+  inspect     Return low-level information on Docker objects
+docker inspect <<image ID>>
+
+Container commands:
+docker run --help
+  run         Create and run a new container from an image
+    -i, --interactive                    Keep STDIN open even
+  -t, --tty                            Allocate a pseudo-TTY
+  d, --detach                         Run container in background and print  container ID
+                                      
+  ps          List containers
+docker run -itd d0ed0a728666
+ -p, --publish list                   Publish a container's  port(s) to the host                                      
+ docker run -itd -p hostport:container port  d0ed0a728666
+ --name string                    Assign a name to the container                                       
+docker run -itd  --name tomcat -p 8080:8080 d0ed0a728666
+docker logs <<container id/name>>
+docker run -itd -p 8081:80 --name nginx f5a6b296b8a2
+
+
