@@ -1,0 +1,11 @@
+11th Sep
+MONOLITHIC VS MICRO SERVICES
+DOCKER:
+INTRODUCTION
+Docker is a tool that is used to automate the deployment of applications in lightweight containers so that applications can work efficiently in different environments in isolation
+
+INSTALLATION
+https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+
+free: communit edition
+premium: enterprise-edition
