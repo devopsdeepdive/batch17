@@ -67,3 +67,18 @@ docker update --memory="125m" 2691f92ecbf4: Memory update for running containers
 
 CPU 
 By default, each container's access to the host machine's CPU cycles is unlimited. 
+
+15th Sep 2023:
+docker run -itd -w /app nginx:set working directory
+docker rename mysql mysql-new
+docker commit 0e1bc96ca8bb
+docker tag 826efc05c6b8n(existing image id) devopsdeepdive/nginxbatch17(username/new image name)
+docker push devopsdeepdive/nginxbatch17
+ docker export --output="my.tar" c216cafc125a
+docker import my.tar
+docker save --output myimage.tar c9101035cede
+ docker load --input myimage.tar
+ docker cp batch17.txt c216cafc125a:/var/: Local to inside container
+docker cp c216cafc125a:/var/sample.txt .: Inside to local(host )
+
+
