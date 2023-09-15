@@ -9,7 +9,7 @@ https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 
 free: communit edition
 premium: enterprise-edition
-12th August 2023
+12th Sep 2023
 docker commands:
 docker hub: search for the images
 y(DockerHub:https://hub.docker.com/)
@@ -43,7 +43,27 @@ docker run -itd d0ed0a728666
 docker run -itd  --name tomcat -p 8080:8080 d0ed0a728666
 docker logs <<container id/name>>
 docker run -itd -p 8081:80 --name nginx f5a6b296b8a2
-13th August 2023
+13th Sep 2023
 docker ps -a : Display all the containers(Running and stopped)
   create      Create a new container
 creating+start=create
+14th SEPT
+For a container to be in a killed state, we run the docker kill command, which sends SIGKILL signals to terminate the main process immediately. This means the difference between docker stop and docker kill is that - stop can allow safe termination (within the grace period) while kill terminates immediately
+docker rmi <<image ID>>
+ docker stop $(docker ps -a -q):Stop the running  containers
+docker rm $(docker ps -a -q) : Remove the all the containers
+docker rmi $(docker images -a -q) :To remove all the images
+exec        Execute a command in a running container
+docker exec -it 50850c8070ec /bin/bash
+  stats       Display a live stream of container(s) resource
+MEMORY:
+https://docs.docker.com/config/containers/resource_constraints/
+
+docker run -itd --memory="50m" f5a6b296b8a2 :Hard limit
+docker run -itd --memory-reservation="150m" f5a6b296b8a2 : soft limit
+docker inspect <<container id>>
+
+docker update --memory="125m" 2691f92ecbf4: Memory update for running containers
+
+CPU 
+By default, each container's access to the host machine's CPU cycles is unlimited. 
