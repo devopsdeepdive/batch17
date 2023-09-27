@@ -81,4 +81,15 @@ docker save --output myimage.tar c9101035cede
  docker cp batch17.txt c216cafc125a:/var/: Local to inside container
 docker cp c216cafc125a:/var/sample.txt .: Inside to local(host )
 
+27th Sep 2023:
+Networking overview
+Container networking refers to the ability for containers to connect to and communicate with each other, or to non-Docker workloads.
+1. bridge: 
+2. host
+docker run -itd --network host  d6cb4fb72e38
+3. overlay
+4. ipvlan
+5. macvlan
+6. none:  
+https://docs.docker.com/network/drivers/
 
