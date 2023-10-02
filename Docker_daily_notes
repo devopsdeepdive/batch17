@@ -93,3 +93,18 @@ docker run -itd --network host  d6cb4fb72e38
 6. none:  
 https://docs.docker.com/network/drivers/
 
+29th sep 2023
+ docker build -t myimage .
+
+FROM
+RUN
+CMD
+ENTRYPOINT
+VOLUME
+WORKDIR
+ENV
+EXPOSE
+COPY
+ADD
+USER
+
