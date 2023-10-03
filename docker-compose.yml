@@ -1,0 +1,13 @@
+version: "2.2"
+services:
+    nginx:
+            #image: nginx:alpine3.17
+      build: .
+      ports:
+        - "8085:80"
+      volumes:
+        - /home/ubuntu/test:/app
+    redis:
+        image: redis
+    adminer:
+        image: adminer
